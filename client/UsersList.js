@@ -15,7 +15,7 @@ const UsersList = props => (
 							{user.name}
 						</li>
 					);
-				});
+				})
 			}
 		</ul>
 	</div>

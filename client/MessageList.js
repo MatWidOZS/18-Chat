@@ -20,7 +20,7 @@ const MessageList = props => (
 						text={message.text}
 					/>
 				);
-			});
+			})
 		}
 	</div>
 );
