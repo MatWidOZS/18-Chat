@@ -25,14 +25,14 @@ io.on('connection', function(socket) {
 		});
 	});
 
-	socket.on('disconnect', () => { //to może powinno być w oddzielnym io.on('connection', function(socket) {});
+	socket.on('disconnect', () => {
 		userService.removeUser(socket.id);
 		socket.broadcast.emit('update', {
 			users: userService.getAllUsers();
 		});
 	});
 
-	socket.on('message', function(message) { //to może powinno być w oddzielnym io.on('connection', function(socket) {});
+	socket.on('message', function(message) {
 		const {name} = userService.getUserById(socket.id);
 		socket.broadcast.emit('message', {
 			text: message.text,
