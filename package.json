@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --env development",
+    "start": "webpack-dev-server --hot --inline",
     "build": "set NODE_ENV=production&webpack"
   },
   "author": "MW",

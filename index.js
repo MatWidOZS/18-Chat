@@ -21,14 +21,14 @@ io.on('connection', function(socket) {
 			name
 		});
 		io.emit('update', {
-			users: userService.getAllUsers();
+			users: userService.getAllUsers()
 		});
 	});
 
 	socket.on('disconnect', () => {
 		userService.removeUser(socket.id);
 		socket.broadcast.emit('update', {
-			users: userService.getAllUsers();
+			users: userService.getAllUsers()
 		});
 	});
 
@@ -41,6 +41,6 @@ io.on('connection', function(socket) {
 	});
 });
 
-server.listen(3000, function() {
-	console.log('listening on *:3000');
+server.listen(8080, function() {
+	console.log('listening on *:8080');
 });
