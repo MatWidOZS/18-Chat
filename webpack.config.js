@@ -26,8 +26,8 @@ function getPlugins() {
 	return plugins;
 }
 //webpack.config.js
-module.exports = (env) => {
-	return {
+module.exports = {
+	// return {
 		entry: (env !== 'production' ? [
 	        'react-hot-loader/patch',
 	        'webpack-dev-server/client?http://localhost:8080',
@@ -67,5 +67,5 @@ module.exports = (env) => {
 			},
 		},
 		plugins: getPlugins()
-	}
+	// }
 };
